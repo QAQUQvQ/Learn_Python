@@ -115,6 +115,8 @@ def save_image(item):
 
 def main(offset):
     json = get_page(offset)
+    # print(type(json))
+    # print(type(get_images(json)))
     for item in get_images(json):
         save_image(item)
 
