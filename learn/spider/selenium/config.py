@@ -4,6 +4,6 @@ MONGO_COLLECTION = 'products'
 
 KEYWORD = 'ipad'
 
-MAX_PAGE = 100
+MAX_PAGE = 10
 
 SERVICE_ARGS = ['--load-images=false', '--disk-cache=true']
