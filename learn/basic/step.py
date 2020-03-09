@@ -18,8 +18,9 @@
 #
 # # 无限循环
 # var = 1
+# num = 100
 # while var == 1:  # 表达式永远为 true
-#     num = int(input("输入一个数字  :"))
+#     # num = int(input("输入一个数字  :"))
 #     print("你输入的数字是: ", num)
 # print("Good bye!")
 #
@@ -36,7 +37,7 @@
 #     print("没有循环数据!")
 # print("完成循环!")
 #
-#
+
 # # 数字循环
 # for i in range(10):
 #     print(i)
@@ -49,6 +50,7 @@
 #     if letter == 'h':
 #         break
 #     print('当前字母 :', letter)
+#
 # var = 10  # 第二个实例
 # while var > 0:
 #     print('当前变量值 :', var)
@@ -65,6 +67,7 @@
 #     if letter == 'h':
 #         continue
 #     print('当前字母 :', letter)
+#
 # var = 10  # 第二个实例
 # while var > 0:
 #     var = var - 1
@@ -80,7 +83,7 @@
 # it = iter(list)    # 创建迭代器对象
 # print(next(it))   # 输出迭代器的下一个元素
 # print(next(it))
-#
+# #
 # list=[1,2,3,4]
 # it = iter(list)    # 创建迭代器对象
 # for x in it:
@@ -141,35 +144,13 @@
 # def print_welcome(name):
 #     print("Welcome", name)
 #
-# print_welcome("Runoob")
+# print_welcome("Bob")
 # w = 4
 # h = 5
 # print("width =", w, " height =", h, " area =", area(w, h))
 #
 #
-# # 可写函数说明
-# sum = lambda arg1, arg2: arg1 + arg2
-#
-# # 调用sum函数
-# print("相加后的值为 : ", sum(10, 20))
-# print("相加后的值为 : ", sum(20, 20))
-#
-# total = 0  # 这是一个全局变量
-#
-#
-# # 可写函数说明
-# def sum(arg1, arg2):
-#     # 返回2个参数的和."
-#     total = arg1 + arg2  # total在这里是局部变量.
-#     print("函数内是局部变量 : ", total)
-#     return total
-#
-#
-# # 调用sum函数
-# sum(10, 20)
-# print("函数外是全局变量 : ", total)
-#
-#
+# # 可变类型
 # def ChangeInt(a):
 #     a = 10
 #
@@ -192,7 +173,7 @@
 # print("函数外取值: ", mylist)
 #
 #
-# # 必须参数
+# # 必需参数
 # def printme(str):
 #     "打印任何传入的字符串"
 #     print(str)
@@ -200,7 +181,7 @@
 #
 #
 # # 调用 printme 函数，不加参数会报错
-# printme()
+# printme("hello")
 #
 #
 # # 关键字参数
@@ -209,10 +190,11 @@
 #     print("名字: ", name)
 #     print("年龄: ", age)
 #     return
-#
-#
-# # 调用printinfo函数
-# printinfo(age=50, name="runoob")
+
+
+# 调用printinfo函数
+# printinfo("Bob", 50)
+# printinfo(age=50, name="Bob")
 #
 #
 # # 默认参数
@@ -221,22 +203,53 @@
 #     print("名字: ", name)
 #     print("年龄: ", age)
 #     return
-#
-#
-# # 调用printinfo函数
+
+
+# 调用printinfo函数
 # printinfo(age=50, name="runoob")
 # print("------------------------")
 # printinfo(name="runoob")
 #
 #
-# 不定长参数
-def printinfo(arg1, *vartuple):
-    "打印任何传入的参数"
-    print("输出: ")
-    print(arg1)
-    print(vartuple)
-    # for each in vartuple:
-    #     print(each)
+# # 不定长参数
+# def printinfo(arg1, *vartuple):
+#     "打印任何传入的参数"
+#     print("输出: ")
+#     print(arg1)
+#     print(vartuple)
+#     # for each in vartuple:
+#     #     print(each)
+#
+# # 调用printinfo 函数
+# printinfo(70, 60, 50)
+#
+#
+# # 匿名函数
+# sum = lambda arg1, arg2: arg1 + arg2
+#
+# # 调用sum函数
+# print("相加后的值为 : ", sum(10, 20))
+# print("相加后的值为 : ", sum(20, 20))
+#
+#
+# 全局变量与局部变量
+# def sum(arg1, arg2):
+#     # 返回2个参数的和."
+#     total = arg1 + arg2
+#     print("函数内 : ", total)
+#     return total
+#
+#
+# # 调用sum函数
+# total = 0  # 这是一个全局变量
+# sum(10, 20)
+# print("函数外 : ", total)
+#
+#
+import sys # 标准库
 
-# 调用printinfo 函数
-printinfo(70, 60, 50)
+print('命令行参数如下:')
+for i in sys.argv:
+    print(i)
+
+print('\n\nPython 路径为：', sys.path, '\n')
