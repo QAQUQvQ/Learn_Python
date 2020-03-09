@@ -23,6 +23,7 @@ word = '字符串'
 sentence = "这是一个句子。"
 paragraph = """这是一个段落，
 可以由多行组成"""
+
 str = 'Runoob'
 print(str)  # 输出字符串
 print(str[0:-1])  # 输出第一个到倒数第二个的所有字符
@@ -53,6 +54,9 @@ list = ['Google', 'Runoob', 1997, 2000]
 print("第三个元素为 : ", list[2])
 list[2] = 2001
 print("更新后的第三个元素为 : ", list[2])
+list.append(2020)
+print(list)
+print(list[4])
 
 
 list = ['Google', 'Runoob', 1997, 2000]
@@ -60,13 +64,13 @@ print("原始列表 : ", list)
 del list[2]
 print("删除第三个元素 : ", list)
 
-#元组示例
+元组示例
 
 tup1 = ('Google', 'Runoob', 1997, 2000);
 tup2 = (1, 2, 3, 4, 5 );
 tup3 = "a", "b", "c", "d";   #  不需要括号也可以
 
-tup1 = (12, 34.56);
+tup1 = (12, 34.56)
 
 tup2 = ('abc', 'xyz')
 # 以下修改元组元素操作是非法的。
@@ -76,7 +80,7 @@ tup3 = tup1 + tup2;
 print(tup3)
 
 
-# 集合示例
+集合示例
 
 thisset = set(("Google", "Runoob", "Taobao"))
 thisset.add("Facebook")
@@ -87,8 +91,9 @@ print(thisset)
 thisset.remove("Taobao")
 print(thisset)
 thisset.remove("Facebook")
+print(thisset)
 
-len(thisset)
+print(len(thisset))
 
 thisset.clear()
 print(thisset)
@@ -98,7 +103,7 @@ print(thisset)
 
 dict = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}
 dict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
-print("dict['Name']: ", dict['Name'])
+print("dict['Alice']: ", dict['Alice'])
 print("dict['Age']: ", dict['Age'])
 
 dict['Age'] = 8  # 更新 Age
