@@ -13,3 +13,7 @@ class Settings():
         self.bullet_color = 60, 60, 60
         self.bullets_allowed = 10
 
+        self.alien_speed_factor = 5
+        self.fleet_drop_speed = 30
+        self.fleet_direction = 1  # 1表示右移，-1表示左移
+
