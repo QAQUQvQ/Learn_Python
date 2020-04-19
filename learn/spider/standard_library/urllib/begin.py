@@ -2,9 +2,11 @@ import urllib.request, urllib.parse
 
 # urlopen()的使用
 # response = urllib.request.urlopen('https://www.baidu.com')
+# print(type(response))
 # print(response.read())
 # print(response.status)
 # print(response.getheaders())
+
 
 
 # Request的使用

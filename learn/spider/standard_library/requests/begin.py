@@ -11,12 +11,22 @@ import requests
 
 
 # 带参数请求 http://httpbin.org/get?name=wubo&age=21
-data = {
-    'name': 'wubo',
-    'age': '21'
-}
-r = requests.get('https://httpbin.org/get', params=data)
-print(r.text)
-print(type(r.text))
-print(r.json())
-print(type(r.json()))
+# data = {
+#     'name': 'wubo',
+#     'age': '21'
+# }
+# r = requests.get('https://httpbin.org/get', params=data)
+# print(type(r))
+# print(r.text)
+# print(type(r.text))
+# print(r.json())
+# print(type(r.json()))
+
+
+# Cookie的获取
+r = requests.get("https://www.baidu.com")
+print(r.cookies)
+for key,value in r.cookies.items():
+    print(key + '=' + value)
+
+
